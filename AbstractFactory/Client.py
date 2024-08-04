@@ -1,21 +1,12 @@
-from FactoryProducts import DarkFactory, LightFactory
+from FactoryProducts import DarkFactory, LightFactory,FactoryAbstract
 
-### Dark ZONE
-darkFactory:DarkFactory = DarkFactory() #instanciate Dark Factory
+def client(factory:FactoryAbstract):
+    button = factory.createButton()
+    text = factory.createText()
 
-button = darkFactory.createButton()
-button.paint()
-text = darkFactory.createText()
-text.paint()
+    print(button.paint())
+    print(text.paint())
 
-
-print("-" * 15)
-
-
-###Light ZONE
-lightFactory:LightFactory = LightFactory() #instanciate Light Factory
-
-button = lightFactory.createButton()
-button.paint()
-text = lightFactory.createText()
-text.paint()
+client(DarkFactory())
+print("-" *15)
+client(LightFactory())

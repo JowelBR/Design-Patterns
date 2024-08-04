@@ -1,5 +1,7 @@
 import abc
 
+from ObjectsAbstract import ButtonAbstract, TextAbstract
+
 from products import (
     LightButton,
     DarkButton,
@@ -10,11 +12,11 @@ from products import (
 class FactoryAbstract(metaclass=abc.ABCMeta):
     
     @abc.abstractmethod
-    def createButton():
+    def createButton(self) -> ButtonAbstract:
         pass
 
     @abc.abstractmethod
-    def createText():
+    def createText(self) -> TextAbstract:
         pass
 
 class DarkFactory(FactoryAbstract):
