@@ -1,13 +1,13 @@
 from pizza import Pizza
 
 class PizzaBuilder():
-    def setDough(self, dough):
+    def setDough(self):
         pass
 
-    def setSauce(self, sauce):
+    def setSauce(self):
         pass
 
-    def setTopping(self, topping):
+    def setTopping(self):
         pass
 
 
