@@ -1,4 +1,4 @@
-from StrcturalPatterns.Adapter.Vehicle import Car, Bicycle
+from StructuralPatterns.Adapter.Vehicle import Car, Bicycle
 
 def equals(car:Car, bicycle:Bicycle):
     if car.__class__ == bicycle.__class__:
